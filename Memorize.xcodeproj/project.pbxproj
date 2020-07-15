@@ -20,6 +20,7 @@
 		4395C8A424BE5FD800E4C844 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8A324BE5FD800E4C844 /* GridLayout.swift */; };
 		4395C8A624BE6B7C00E4C844 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8A524BE6B7B00E4C844 /* Array+Identifiable.swift */; };
 		4395C8AC24BEB91200E4C844 /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8AB24BEB91200E4C844 /* Array+Only.swift */; };
+		4395C8AE24BEBB8D00E4C844 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4395C8AD24BEBB8D00E4C844 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4395C8A324BE5FD800E4C844 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		4395C8A524BE6B7B00E4C844 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
 		4395C8AB24BEB91200E4C844 /* Array+Only.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
+		4395C8AD24BEBB8D00E4C844 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				4347A4F624B67B2600724A52 /* .swiftlint.yml */,
+				4395C8AD24BEBB8D00E4C844 /* .gitignore */,
 				436FA03D248025BD0048D160 /* Memorize */,
 				436FA03C248025BC0048D160 /* Products */,
 			);
@@ -155,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4395C8AE24BEBB8D00E4C844 /* .gitignore in Resources */,
 				4347A4F724B67B2600724A52 /* .swiftlint.yml in Resources */,
 				436FA04B248025BE0048D160 /* LaunchScreen.storyboard in Resources */,
 				436FA048248025BE0048D160 /* Preview Assets.xcassets in Resources */,
