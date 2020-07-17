@@ -13,4 +13,17 @@ struct AppTheme<CardContent> {
     var numberOfPairsToShow: Int
     var emojisToUse: [CardContent]
     var color: Color
+
+    init(name: String, numberOfPairsToShow: Int?, emojisToUse: [CardContent], color: Color) {
+        self.name = name
+        self.numberOfPairsToShow = Int.random(in: 2...emojisToUse.count)
+        self.emojisToUse = emojisToUse
+        self.color = color
+    }
+
+    init(name: String, emojisToUse: [CardContent], color: Color) {
+        let numberOfPairsToShow = Int.random(in: 2...emojisToUse.count)
+
+        self.init(name: name, numberOfPairsToShow: numberOfPairsToShow, emojisToUse: emojisToUse, color: color)
+    }
 }

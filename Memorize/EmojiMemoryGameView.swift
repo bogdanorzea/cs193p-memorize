@@ -14,9 +14,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
+                Text("Score: \(self.viewModel.score)")
                 Spacer()
                 NewGameButton { self.viewModel.reset() }
-            }
+            }.padding()
             Text("Game theme: \(viewModel.theme.name)")
             Grid(viewModel.cards) { card in
                 CardView(card: card, color: self.viewModel.theme.color).onTapGesture {
@@ -40,7 +41,6 @@ struct NewGameButton: View {
                 .padding(10.0)
                 .overlay(RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 2.0))
         })
-            .padding()
             .alert(isPresented: self.$showNewGameAlert, content: { () -> Alert in
                 Alert(
                     title: Text("Start a new game?"),
