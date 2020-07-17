@@ -12,14 +12,43 @@ struct ContentView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
 
     var body: some View {
-        Grid(viewModel.cards) { card in
-            CardView(card: card, color: self.viewModel.theme.color).onTapGesture {
-                    self.viewModel.choseCard(card: card)
+        VStack {
+            HStack {
+                Spacer()
+                NewGameButton { self.viewModel.reset() }
             }
-            .padding(5)
+            Text("Game theme: \(viewModel.theme.name)")
+            Grid(viewModel.cards) { card in
+                CardView(card: card, color: self.viewModel.theme.color).onTapGesture {
+                    self.viewModel.choseCard(card: card)
+                }
+                .padding(5)
+            }
+            .foregroundColor(viewModel.theme.color)
+            .padding()
         }
-        .foregroundColor(viewModel.theme.color)
-        .padding()
+    }
+}
+
+struct NewGameButton: View {
+    @State var showNewGameAlert = false
+    var action: () -> Void
+
+    var body: some View {
+        Button(action: { self.showNewGameAlert = true }, label: {
+            Text("New game")
+                .padding(10.0)
+                .overlay(RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 2.0))
+        })
+            .padding()
+            .alert(isPresented: self.$showNewGameAlert, content: { () -> Alert in
+                Alert(
+                    title: Text("Start a new game?"),
+                    message: Text("Starting a new game will reset your current game"),
+                    primaryButton: .default(Text("Yes"), action: action ),
+                    secondaryButton: .cancel()
+                )
+            })
     }
 }
 
