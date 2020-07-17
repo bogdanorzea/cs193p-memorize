@@ -13,18 +13,19 @@ struct ContentView: View {
 
     var body: some View {
         Grid(viewModel.cards) { card in
-            CardView(card: card).onTapGesture {
+            CardView(card: card, color: self.viewModel.theme.color).onTapGesture {
                     self.viewModel.choseCard(card: card)
             }
             .padding(5)
         }
-        .foregroundColor(Color.orange)
+        .foregroundColor(viewModel.theme.color)
         .padding()
     }
 }
 
 struct CardView: View {
     var card: MemoryGame<String>.Card
+    var color: Color
 
     var body: some View {
         GeometryReader { geometry in
@@ -40,7 +41,7 @@ struct CardView: View {
                 Text(card.content)
             } else {
                 if !card.isMatched {
-                    RoundedRectangle(cornerRadius: cornerRadius).fill(Color.orange)
+                    RoundedRectangle(cornerRadius: cornerRadius).fill(color)
                 }
             }
         }
