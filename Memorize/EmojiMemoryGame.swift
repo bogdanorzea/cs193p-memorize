@@ -28,7 +28,7 @@ class EmojiMemoryGame: ObservableObject {
         AppTheme<String>(name: "Tools", numberOfPairsToShow: 8, emojisToUse: ["🔧", "🔨", "🔪", "🪓", "🧱", "🧰", "🩺", "🧹", "🔦"], color: .gray)
     ]
 
-    static func createMemoryGame(theme: AppTheme<String>) -> MemoryGame<String> {
+    private static func createMemoryGame(theme: AppTheme<String>) -> MemoryGame<String> {
         return MemoryGame<String>(numberOfPairsOfCards: theme.numberOfPairsToShow) { pairIndex in theme.emojisToUse[pairIndex] }
     }
 

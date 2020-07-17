@@ -38,8 +38,8 @@ struct NewGameButton: View {
     var body: some View {
         Button(action: { self.showNewGameAlert = true }, label: {
             Text("New game")
-                .padding(10.0)
-                .overlay(RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 2.0))
+                .padding()
+                .overlay(RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: edgeLineWidth))
         })
             .alert(isPresented: self.$showNewGameAlert, content: { () -> Alert in
                 Alert(
@@ -50,6 +50,10 @@ struct NewGameButton: View {
                 )
             })
     }
+
+    // MARK: - Drawing constants
+    private let cornerRadius: CGFloat = 10.0
+    private let edgeLineWidth: CGFloat = 2.0
 }
 
 struct CardView: View {
@@ -62,7 +66,7 @@ struct CardView: View {
         }
     }
 
-    func body(for size: CGSize) -> some View {
+    private func body(for size: CGSize) -> some View {
         ZStack {
             if card.isFaceUp {
                 RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
@@ -78,9 +82,9 @@ struct CardView: View {
     }
 
     // MARK: - Drawing constants
-    let cornerRadius: CGFloat = 10.0
-    let edgeLineWidth: CGFloat = 3.0
-    func fontSize(for size: CGSize) -> CGFloat {
+    private let cornerRadius: CGFloat = 10.0
+    private let edgeLineWidth: CGFloat = 3.0
+    private func fontSize(for size: CGSize) -> CGFloat {
         min(size.width, size.height) * 0.75
     }
 }

@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct AppTheme<CardContent> {
-    var name: String
-    var numberOfPairsToShow: Int
-    var emojisToUse: [CardContent]
-    var color: Color
+    private(set) var name: String
+    private(set) var numberOfPairsToShow: Int
+    private(set) var emojisToUse: [CardContent]
+    private(set) var color: Color
 
     init(name: String, numberOfPairsToShow: Int?, emojisToUse: [CardContent], color: Color) {
         self.name = name
