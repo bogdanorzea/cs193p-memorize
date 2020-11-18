@@ -22,7 +22,7 @@ struct ContentView: View {
             }.padding()
             Text("Game theme: \(viewModel.theme.name)")
             Grid(viewModel.cards) { card in
-                CardView(card: card, color: self.viewModel.theme.color)
+                CardView(card: card, color: Color(self.viewModel.theme.color))
                     .onTapGesture {
                         withAnimation {
                             self.viewModel.choseCard(card: card)
@@ -30,7 +30,7 @@ struct ContentView: View {
                     }
                     .padding(5)
             }
-            .foregroundColor(viewModel.theme.color)
+            .foregroundColor(Color(viewModel.theme.color))
             .padding()
         }
     }

@@ -8,22 +8,20 @@
 
 import SwiftUI
 
-struct AppTheme<CardContent> {
+struct AppTheme<CardContent>: Codable where CardContent: Codable {
     private(set) var name: String
     private(set) var numberOfPairsToShow: Int
     private(set) var emojisToUse: [CardContent]
-    private(set) var color: Color
+    private(set) var color: UIColor.RGB
 
-    init(name: String, numberOfPairsToShow: Int?, emojisToUse: [CardContent], color: Color) {
+    init(name: String, numberOfPairsToShow: Int?, emojisToUse: [CardContent], color: UIColor) {
         self.name = name
         self.numberOfPairsToShow = Int.random(in: 2...emojisToUse.count)
         self.emojisToUse = emojisToUse
-        self.color = color
+        self.color = color.rgb
     }
 
-    init(name: String, emojisToUse: [CardContent], color: Color) {
-        let numberOfPairsToShow = Int.random(in: 2...emojisToUse.count)
-
-        self.init(name: name, numberOfPairsToShow: numberOfPairsToShow, emojisToUse: emojisToUse, color: color)
+    var json: Data? {
+        return try? JSONEncoder().encode(self)
     }
 }

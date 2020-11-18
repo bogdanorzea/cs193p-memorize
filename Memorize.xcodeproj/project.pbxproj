@@ -10,6 +10,8 @@
 		430498AE249181F9007E1D01 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430498AD249181F9007E1D01 /* EmojiMemoryGame.swift */; };
 		430498B024918270007E1D01 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430498AF24918270007E1D01 /* MemoryGame.swift */; };
 		4347A4F724B67B2600724A52 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4347A4F624B67B2600724A52 /* .swiftlint.yml */; };
+		436B43D12564CA59007733F4 /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436B43D02564CA59007733F4 /* UIColor+RGBA.swift */; };
+		436B43D72564D130007733F4 /* Data+UTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436B43D62564D130007733F4 /* Data+UTF8.swift */; };
 		436FA03F248025BD0048D160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FA03E248025BD0048D160 /* AppDelegate.swift */; };
 		436FA041248025BD0048D160 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FA040248025BD0048D160 /* SceneDelegate.swift */; };
 		436FA043248025BD0048D160 /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FA042248025BD0048D160 /* EmojiMemoryGameView.swift */; };
@@ -30,6 +32,8 @@
 		430498AD249181F9007E1D01 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		430498AF24918270007E1D01 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		4347A4F624B67B2600724A52 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		436B43D02564CA59007733F4 /* UIColor+RGBA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBA.swift"; sourceTree = "<group>"; };
+		436B43D62564D130007733F4 /* Data+UTF8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+UTF8.swift"; sourceTree = "<group>"; };
 		436FA03B248025BC0048D160 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		436FA03E248025BD0048D160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436FA040248025BD0048D160 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 				4395C8AB24BEB91200E4C844 /* Array+Only.swift */,
 				436FA044248025BE0048D160 /* Assets.xcassets */,
 				438588CD24C6968000B7A045 /* Cardify.swift */,
+				436B43D62564D130007733F4 /* Data+UTF8.swift */,
 				430498AD249181F9007E1D01 /* EmojiMemoryGame.swift */,
 				436FA042248025BD0048D160 /* EmojiMemoryGameView.swift */,
 				4395C8A124BCF41E00E4C844 /* Grid.swift */,
@@ -96,6 +101,7 @@
 				43F7C39824DA502D00FF7908 /* Pie.swift */,
 				436FA046248025BE0048D160 /* Preview Content */,
 				436FA040248025BD0048D160 /* SceneDelegate.swift */,
+				436B43D02564CA59007733F4 /* UIColor+RGBA.swift */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -136,7 +142,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Bogdan Orzea";
 				TargetAttributes = {
 					436FA03A248025BC0048D160 = {
@@ -202,12 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436B43D72564D130007733F4 /* Data+UTF8.swift in Sources */,
 				436FA03F248025BD0048D160 /* AppDelegate.swift in Sources */,
 				43F7C39924DA502D00FF7908 /* AppTheme.swift in Sources */,
 				436FA041248025BD0048D160 /* SceneDelegate.swift in Sources */,
 				430498B024918270007E1D01 /* MemoryGame.swift in Sources */,
 				4395C8AC24BEB91200E4C844 /* Array+Only.swift in Sources */,
 				436FA043248025BD0048D160 /* EmojiMemoryGameView.swift in Sources */,
+				436B43D12564CA59007733F4 /* UIColor+RGBA.swift in Sources */,
 				43F7C39A24DA502D00FF7908 /* Pie.swift in Sources */,
 				430498AE249181F9007E1D01 /* EmojiMemoryGame.swift in Sources */,
 				438588CE24C6968000B7A045 /* Cardify.swift in Sources */,
@@ -257,6 +265,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -281,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -317,6 +326,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -335,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
